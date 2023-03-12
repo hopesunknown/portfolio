@@ -13,8 +13,6 @@ const Home: NextPage = () => {
       </Head>
       
       {/* <h1 className='p-10 text-red-500'>testing</h1> */}
-
-      {/* Header */}
       <Header />
 
       {/* Hero */}
