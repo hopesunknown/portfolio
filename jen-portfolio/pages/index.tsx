@@ -1,5 +1,6 @@
 import type {NextPage} from 'next';
 import Head from 'next/head';
+import Header from './../components/Header';
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +12,22 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <h1 className='p-10 text-red-500'>testing</h1>
+      {/* <h1 className='p-10 text-red-500'>testing</h1> */}
+
+      {/* Header */}
+      <Header />
+
+      {/* Hero */}
+
+      {/* About me */}
+
+      {/* Experiences */}
+
+      {/* Skills */}
+
+      {/* Projects */}
+
+      {/* Contact me */}
     </>
   )
 };
