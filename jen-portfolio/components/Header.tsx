@@ -26,17 +26,17 @@ function Header({}: Props) {
         {/* Social media icons */}
         <SocialIcon
           url='https://www.youtube.com/@jentchai1728' 
-          fgColor='black' 
+          fgColor='transparent' 
           bgColor='#FBC101' 
         /><br/>
         <SocialIcon 
           url='https://www.linkedin.com/in/jentchai/' 
-          fgColor='black' 
+          fgColor='transparent' 
           bgColor='#FBC101' 
         />
         <SocialIcon 
           url='https://medium.com/@jentchai' 
-          fgColor='black' 
+          fgColor='transparent' 
           bgColor='#FBC101' 
         />
       </motion.div>
@@ -60,7 +60,7 @@ function Header({}: Props) {
         <SocialIcon 
           className='cursor-pointer'
           network='email'
-          fgColor='black' 
+          fgColor='transparent' 
           bgColor='#FBC101' 
         />
         <p className='p-3 uppercase hidden md:inline-flex text-sm text-black-400'>Get in touch</p>
