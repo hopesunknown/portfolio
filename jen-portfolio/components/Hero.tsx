@@ -30,8 +30,8 @@ const Hero = (props: Props) => {
         alt='profile image of the developer' 
       />
       <div>
-        <h1>Hello, my name is Jen Tchai</h1>
-        <h2>I am a Frontend Developer, based in Washington, DC.</h2>
+        <h1 className='text-5xl lg:text-6xl font-semibold px-10'>Hello, my name is Jen Tchai</h1>
+        <h2 className='text-xl text-gray-500 pb-2 tracking-[2px]'>I am a Frontend Developer, based in Washington, DC.</h2>
         {/* <div>{text}</div> */}
       </div>
     </motion.div>
