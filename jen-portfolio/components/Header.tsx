@@ -20,24 +20,27 @@ function Header({}: Props) {
           scale: 1
         }}
         transition={{
-          duration: 1
+          duration: 1.5
         }}
       >
         {/* Social media icons */}
         <SocialIcon
           url='https://www.youtube.com/@jentchai1728' 
           fgColor='transparent' 
-          bgColor='#FBC101' 
+          bgColor='#FBC101'
+          style={{ margin: 5 }} 
         /><br/>
         <SocialIcon 
           url='https://www.linkedin.com/in/jentchai/' 
           fgColor='transparent' 
           bgColor='#FBC101' 
+          style={{ margin: 5 }} 
         />
         <SocialIcon 
           url='https://medium.com/@jentchai' 
           fgColor='transparent' 
           bgColor='#FBC101' 
+          style={{ margin: 5 }} 
         />
       </motion.div>
 
@@ -54,7 +57,7 @@ function Header({}: Props) {
           scale: 1
         }}
         transition={{
-          duration: 1
+          duration: 1.5
         }}
       >
         <SocialIcon 
