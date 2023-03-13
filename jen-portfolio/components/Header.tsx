@@ -19,28 +19,28 @@ function Header({}: Props) {
           opacity: 1,
           scale: 1
         }}
-        transition={{
-          duration: 1.5
-        }}
+        transition={{duration: 1.5}}
       >
-        {/* Social media icons */}
         <SocialIcon
           url='https://www.youtube.com/@jentchai1728' 
+          target='_blank'
           fgColor='transparent' 
           bgColor='#FBC101'
-          style={{ margin: 5 }} 
+          style={{margin: 5}} 
         /><br/>
         <SocialIcon 
           url='https://www.linkedin.com/in/jentchai/' 
+          target='_blank'
           fgColor='transparent' 
           bgColor='#FBC101' 
-          style={{ margin: 5 }} 
+          style={{margin: 5}} 
         />
         <SocialIcon 
           url='https://medium.com/@jentchai' 
+          target='_blank'
           fgColor='transparent' 
           bgColor='#FBC101' 
-          style={{ margin: 5 }} 
+          style={{margin: 5}} 
         />
       </motion.div>
 
@@ -63,6 +63,7 @@ function Header({}: Props) {
         <SocialIcon 
           className='cursor-pointer'
           network='email'
+          url='mailto:jentchai@gmail.com'
           fgColor='transparent' 
           bgColor='#FBC101' 
         />
