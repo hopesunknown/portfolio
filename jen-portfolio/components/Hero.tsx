@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import profilePic from './../public/image0.jpeg';
 import {useTypewriter} from 'react-simple-typewriter';
 import {motion} from 'framer-motion';
@@ -29,10 +30,27 @@ const Hero = (props: Props) => {
         placeholder='blur'
         alt='profile image of the developer' 
       />
-      <div>
+      <div className='z-20'>
         <h1 className='text-5xl lg:text-6xl font-semibold px-10'>Hello, my name is Jen Tchai</h1>
         <h2 className='text-xl text-gray-500 pb-2 tracking-[2px]'>I am a Frontend Developer, based in Washington, DC.</h2>
         {/* <div>{text}</div> */}
+      </div>
+      <div className='pt-5'>
+        <Link href='#about'>
+          <button className='heroButton'>About Me</button>
+        </Link>
+        <Link href='#experience'>
+          <button className='heroButton'>Experience</button>
+        </Link>
+        <Link href='#skills'>
+          <button className='heroButton'>Skills</button>
+        </Link>
+        <Link href='#projects'>
+          <button className='heroButton'>Projects</button>
+        </Link>
+        <Link href='#contact'>
+          <button className='heroButton'>Contact Me</button>
+        </Link>
       </div>
     </motion.div>
   )
