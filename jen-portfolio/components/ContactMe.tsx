@@ -1,9 +1,20 @@
 import React from 'react';
 import {PhoneIcon, MapPinIcon, EnvelopeIcon} from '@heroicons/react/24/solid';
+import {useForm, SubmitHandler} from "react-hook-form";
+
+type Inputs = {
+  name: string,
+  email: string,
+  subject: string,
+  message: string
+};
 
 type Props = {};
 
 const ContactMe = (props: Props) => {
+  const {register, handleSubmit} = useForm<Inputs>();
+  // const onSubmit: SubmitHandler<Inputs> = (formData) => window.location.href = `mailto:jentchai@gmail.com?subject=${formData.subject}&body=My name is ${formData.name} and my email is ${formData.email}. ${formData.message}`;
+
   return (
     <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
       <h3 className='absolute top-24 uppercase tracking-[5px] text-gray-500 text-2xl'>
@@ -28,13 +39,19 @@ const ContactMe = (props: Props) => {
             </div>
           </div>
 
-        <form className='flex flex-col space-y-2 w-fit mx-auto'>
+        <form 
+          // onSubmit={handleSubmit(onSubmit)} 
+          action='https://formsubmit.co/e725e159ba0dc850132dc2683d0df0f9'
+          method='POST'
+          target='_blank'
+          className='flex flex-col space-y-2 w-fit mx-auto'
+        >
           <div className='flex space-x-2'>
-            <input className='contactInput' placeholder='Name' type='text' />
-            <input className='contactInput' placeholder='Email' type='email' />
+            <input {...register('name')} className='contactInput' placeholder='Name' type='text' />
+            <input {...register('email')} className='contactInput' placeholder='Email' type='email' />
           </div>
-          <input className='contactInput' placeholder='Subject' type='text' />
-          <textarea className='contactInput' placeholder='Message' />
+          <input {...register('subject')} className='contactInput' placeholder='Subject' type='text' />
+          <textarea {...register('message')} className='contactInput' placeholder='Message' />
           <button className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg'>
             Send Message
           </button>

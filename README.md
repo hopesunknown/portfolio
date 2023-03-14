@@ -1,3 +1,25 @@
+# Jen Tchai - Portfolio Site - (README updated March 2023)
+
+This is a personal project where I showcase who I am, my work experiences, skills, projects, social media links. It includes an area for contacting me via form at the bottom.
+
+## Technologies used:
+
+React/NextJS, Typescript, Tailwind CSS, Sanity (for CMS)
+
+## Fun extras used:
+
+Hero Icons (for Contact Me section), React Social Icons (for Social Media buttons), React Hook Form (for contact form performance/validation), Framer Motion (for animations), Formsubmit.co (for handling form submissions)
+
+### To start this NextJS project:
+
+'npm run dev' in terminal
+
+### To view locally:
+
+type 'localhost:3000' in browser - this is the default but check if it runs on another local host portal
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
