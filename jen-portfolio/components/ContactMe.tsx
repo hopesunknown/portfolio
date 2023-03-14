@@ -13,11 +13,30 @@ const ContactMe = (props: Props) => {
         <h4 className='text-4xl font-semibold text-center'> this is where you contact me
           <span className='decoration-[#F7AB0A]/50 underline'>right here</span>
         </h4>
-        <div>
-          <div className='flex items-center'>
-            <PhoneIcon />
+        <div className='space-y-10'>
+          <div className='flex items-center space-x-5 justify-center'>
+              <PhoneIcon className='text-[#F7AB0A] h-7 w-7' />
+              <p className='text-2xl'>+2435353873</p>
+            </div>
+            <div className='flex items-center space-x-5 justify-center'>
+              <MapPinIcon className='text-[#F7AB0A] h-7 w-7' />
+              <p className='text-2xl'>Washington, DC</p>
+            </div>
+            <div className='flex items-center space-x-5 justify-center'>
+              <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7' />
+              <p className='text-2xl'>jentchai@gmail.com</p>
+            </div>
           </div>
-        </div>
+
+        <form className='flex flex-col space-y-2 w-fit'>
+          <div>
+            <input type='text' /><input type='text' />
+          </div>
+          <input type='text' />
+          <textarea />
+          <button>Send Message</button>
+        </form>
+
       </div>
     </div>
   )
