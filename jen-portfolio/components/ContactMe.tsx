@@ -28,13 +28,16 @@ const ContactMe = (props: Props) => {
             </div>
           </div>
 
-        <form className='flex flex-col space-y-2 w-fit'>
-          <div>
-            <input type='text' /><input type='text' />
+        <form className='flex flex-col space-y-2 w-fit mx-auto'>
+          <div className='flex space-x-2'>
+            <input className='contactInput' placeholder='Name' type='text' />
+            <input className='contactInput' placeholder='Email' type='email' />
           </div>
-          <input type='text' />
-          <textarea />
-          <button>Send Message</button>
+          <input className='contactInput' placeholder='Subject' type='text' />
+          <textarea className='contactInput' placeholder='Message' />
+          <button className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg'>
+            Send Message
+          </button>
         </form>
 
       </div>
