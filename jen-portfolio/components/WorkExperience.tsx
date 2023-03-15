@@ -4,7 +4,7 @@ import ExperienceCard from './ExperienceCard';
 
 type Props = {};
 
-const Experience = (props: Props) => {
+const WorkExperience = (props: Props) => {
   return (
     <>
       <motion.div 
@@ -28,4 +28,4 @@ const Experience = (props: Props) => {
   )
 }
 
-export default Experience;
+export default WorkExperience;

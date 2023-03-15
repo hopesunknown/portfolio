@@ -1,16 +1,31 @@
-import type {NextPage} from 'next';
+import type {GetStaticProps, NextPage} from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
 import Header from './../components/Header';
 import Hero from './../components/Hero';
 import About from './../components/About';
-import Experience from './../components/Experience';
+import WorkExperience from './../components/WorkExperience';
 import Skills from './../components/Skills';
 import Projects from './../components/Projects';
 import ContactMe from './../components/ContactMe';
 import {ArrowUpCircleIcon} from '@heroicons/react/24/solid';
+import {Experience, PageInfo, Project, Skill, Social} from './../typings';
+import {fetchProjects} from './../../utils/fetchProjects';
+import {fetchSkills} from './../../utils/fetchSkills';
+import {fetchSocials} from './../../utils/fetchSocials';
+import {fetchExperiences} from './../../utils/fetchExperiences';
+import {fetchPageInfo} from './../../utils/fetchPageInfo';
 
-const Home: NextPage = () => {
+
+type Props = {
+  pageInfo: PageInfo;
+  experiences: Experience[];
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[];
+}
+
+const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
   return (
     <>
       <div className='bg-[rgb(27,27,27)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-500/20 scrollbar-thumb-[#F7AB0A]/80'>
@@ -32,7 +47,7 @@ const Home: NextPage = () => {
         </section>
 
         <section id='experience' className='snap-center'>
-          <Experience />
+          <WorkExperience />
         </section>
 
         <section id='skills' className='snap-start'>
@@ -63,3 +78,23 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const experiences: Experience[] = await fetchExperiences();
+  const skills: Skill[] = await fetchSkills();
+  const projects: Project[] = await fetchProjects();
+  const socials: Social[] = await fetchSocials();
+
+  return {
+    props: {
+      pageInfo,
+      experiences,
+      skills,
+      projects,
+      socials
+    },
+    // the following means that NextJS will attempt to regenerate the page when a request comes in, at most once per 10 secs
+    revalidate: 10,
+  };
+}
