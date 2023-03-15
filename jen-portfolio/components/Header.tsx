@@ -73,17 +73,17 @@ function Header({}: Props) {
             duration: 1.5
           }}
         >
-          {/* <Link href='#contact'> */}
             <SocialIcon 
               className='hoverSocialBtn'
               network='email'
-              url='mailto:jentchai@gmail.com'
-              // href='#contact'
+              // url='mailto:jentchai@gmail.com'
+              url='#contact'
               fgColor='transparent' 
               bgColor='#FBC101' 
             />
+          <Link href='#contact'>
             <p className='p-3 uppercase hidden md:inline-flex text-sm text-black-400'>Get in touch</p>
-          {/* </Link> */}
+          </Link>
         </motion.div>
     </header>
   )
