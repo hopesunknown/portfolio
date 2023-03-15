@@ -1,5 +1,6 @@
 import React from 'react';
-import {PhoneIcon, MapPinIcon, EnvelopeIcon} from '@heroicons/react/24/solid';
+import {SocialIcon} from 'react-social-icons';
+// import {EnvelopeIcon} from '@heroicons/react/24/solid';
 import {useForm, SubmitHandler} from "react-hook-form";
 
 type Inputs = {
@@ -21,22 +22,53 @@ const ContactMe = (props: Props) => {
         Contact Me
       </h3>
       <div className='flex flex-col space-y-10'>
-        <h4 className='text-4xl font-semibold text-center'> this is where you contact me
-          <span className='decoration-[#F7AB0A]/50 underline'>right here</span>
+        <h4 className='text-4xl font-semibold text-center'>This is where you can find me.<br/>
+          <span className='decoration-[#FBC101]/50 underline'>Let's connect.</span>
         </h4>
         <div className='space-y-10'>
           <div className='flex items-center space-x-5 justify-center'>
-              <PhoneIcon className='text-[#F7AB0A] h-7 w-7' />
-              <p className='text-2xl'>+2435353873</p>
+              <SocialIcon
+          url='https://www.github.com/hopesunknown' 
+          target='_blank'
+          fgColor='transparent' 
+          bgColor='#FBC101'
+          style={{margin: 2}}
+          className='hoverSocialBtn' 
+        /><a href='https://www.github.com/hopesunknown' target='_blank'>github.com/hopesunknown</a><br/>
+            </div>
+
+            <div className='flex items-center space-x-5 justify-center'>
+              <SocialIcon 
+          url='https://www.linkedin.com/in/jentchai/' 
+          target='_blank'
+          fgColor='transparent' 
+          bgColor='#FBC101' 
+          style={{margin: 2}}
+          className='hoverSocialBtn'  
+        /><a href='https://www.linkedin.com/in/jentchai/' target='_blank'>linkedin.com/in/jentchai/</a>
+            </div>
+
+            <div className='flex items-center space-x-5 justify-center'>
+              <SocialIcon
+          url='https://www.youtube.com/@jentchai1728' 
+          target='_blank'
+          fgColor='transparent' 
+          bgColor='#FBC101'
+          style={{margin: 2}} 
+          className='hoverSocialBtn' 
+        /><a href='https://www.youtube.com/@jentchai1728' target='_blank'>youtube.com/@jentchai1728</a>
             </div>
             <div className='flex items-center space-x-5 justify-center'>
-              <MapPinIcon className='text-[#F7AB0A] h-7 w-7' />
-              <p className='text-2xl'>Washington, DC</p>
+              <SocialIcon 
+          url='https://medium.com/@jentchai' 
+          target='_blank'
+          fgColor='transparent' 
+          bgColor='#FBC101' 
+          style={{margin: 2}} 
+          className='hoverSocialBtn' 
+        /><a href='https://medium.com/@jentchai' target='_blank'>medium.com/@jentchai</a>
             </div>
-            <div className='flex items-center space-x-5 justify-center'>
-              <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7' />
-              <p className='text-2xl'>jentchai@gmail.com</p>
-            </div>
+
           </div>
 
         <form 
@@ -52,7 +84,8 @@ const ContactMe = (props: Props) => {
           </div>
           <input {...register('subject')} className='contactInput' placeholder='Subject' type='text' />
           <textarea {...register('message')} className='contactInput' placeholder='Message' />
-          <button className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg'>
+          {/* <button className='bg-[#FBC101] py-5 px-10 rounded-md text-black font-bold text-lg'> */}
+          <button className='heroButton'>
             Send Message
           </button>
         </form>

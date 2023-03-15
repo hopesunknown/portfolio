@@ -2,11 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import profilePic from './../public/image0.jpeg';
-import {useTypewriter} from 'react-simple-typewriter';
+// import {useTypewriter} from 'react-simple-typewriter';
 import {motion} from 'framer-motion';
 import BackgroundCircles from './BackgroundCircles';
 
-type Props = {}
+type Props = {};
 
 const Hero = (props: Props) => {
   // const [text, helper] = useTypewriter({ 
@@ -24,13 +24,13 @@ const Hero = (props: Props) => {
       <BackgroundCircles />
       <Image
         src={profilePic}
-        height={200}
-        width={200}
+        height={250}
+        width={250}
         className='roundedImg'
         placeholder='blur'
         alt='profile image of the developer' 
       />
-      <div className='z-20'>
+      <div className='z-50'>
         <h1 className='text-5xl lg:text-6xl font-semibold px-10'>Hello, my name is Jen Tchai</h1>
         <h2 className='text-xl text-gray-500 pb-2 tracking-[2px]'>I am a Frontend Developer, based in Washington, DC.</h2>
         {/* <div>{text}</div> */}

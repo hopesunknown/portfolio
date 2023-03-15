@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import {SocialIcon} from 'react-social-icons';
 import {motion} from 'framer-motion';
 
@@ -54,32 +55,36 @@ function Header({}: Props) {
           className='hoverSocialBtn' 
         />
       </motion.div>
+      
 
-      <motion.div 
-        className='flex flex-row items-center text-black-300 cursor-pointer'
-        initial={{
-          x: 500,
-          opacity: 0,
-          scale: 0.5
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          scale: 1
-        }}
-        transition={{
-          duration: 1.5
-        }}
-      >
-        <SocialIcon 
-          className='hoverSocialBtn'
-          network='email'
-          url='mailto:jentchai@gmail.com'
-          fgColor='transparent' 
-          bgColor='#FBC101' 
-        />
-        <p className='p-3 uppercase hidden md:inline-flex text-sm text-black-400'>Get in touch</p>
-      </motion.div>
+        <motion.div 
+          className='flex flex-row items-center text-black-300 cursor-pointer'
+          initial={{
+            x: 500,
+            opacity: 0,
+            scale: 0.5
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1
+          }}
+          transition={{
+            duration: 1.5
+          }}
+        >
+          {/* <Link href='#contact'> */}
+            <SocialIcon 
+              className='hoverSocialBtn'
+              network='email'
+              url='mailto:jentchai@gmail.com'
+              // href='#contact'
+              fgColor='transparent' 
+              bgColor='#FBC101' 
+            />
+            <p className='p-3 uppercase hidden md:inline-flex text-sm text-black-400'>Get in touch</p>
+          {/* </Link> */}
+        </motion.div>
     </header>
   )
 }
