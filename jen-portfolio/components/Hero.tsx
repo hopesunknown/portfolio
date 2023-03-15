@@ -1,19 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import profilePic from './../public/image0.jpeg';
+// import profilePic from './../public/image0.jpeg';
 // import {useTypewriter} from 'react-simple-typewriter';
+import {urlFor} from './../sanity';
 import {motion} from 'framer-motion';
 import BackgroundCircles from './BackgroundCircles';
+import {PageInfo} from './../typings';
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const Hero = (props: Props) => {
-  // const [text, helper] = useTypewriter({ 
-  //   words: ['hello', 'this', 'is', 'cool'],
-  //   loop: true,
-  //   delaySpeed: 2000
-  // })
+const Hero = ({pageInfo}: Props) => {
   return (
     <motion.div 
       initial={{opacity: 0}}
@@ -23,16 +22,17 @@ const Hero = (props: Props) => {
     >
       <BackgroundCircles />
       <div className='flex flex-col z-50 items-center'>
-      <Image
-        src={profilePic}
+      <img
+        // src={profilePic}
+        src={urlFor(pageInfo?.heroImage).url()}
         height={250}
         width={250}
         className='roundedImg'
         placeholder='blur'
         alt='profile image of the developer' 
       />
-        <h1 className='text-5xl lg:text-6xl font-semibold px-10'>Hello, my name is Jen Tchai.</h1>
-        <h2 className='text-xl text-gray-500 pb-2 tracking-[2px]'>I am a Frontend Developer, based in Washington, DC.</h2>
+        <h1 className='text-5xl lg:text-6xl font-semibold px-10'>Hello, my name is {pageInfo?.name}.</h1>
+        <h2 className='text-xl text-gray-500 pb-2 tracking-[2px]'>{pageInfo?.role}</h2>
         {/* <div>{text}</div> */}
       </div>
       <div className='pt-5'>
