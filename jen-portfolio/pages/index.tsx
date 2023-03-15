@@ -10,11 +10,11 @@ import Projects from './../components/Projects';
 import ContactMe from './../components/ContactMe';
 import {ArrowUpCircleIcon} from '@heroicons/react/24/solid';
 import {Experience, PageInfo, Project, Skill, Social} from './../typings';
-import {fetchProjects} from './../../utils/fetchProjects';
-import {fetchSkills} from './../../utils/fetchSkills';
-import {fetchSocials} from './../../utils/fetchSocials';
-import {fetchExperiences} from './../../utils/fetchExperiences';
-import {fetchPageInfo} from './../../utils/fetchPageInfo';
+import {fetchProjects} from './../utils/fetchProjects';
+import {fetchSkills} from './../utils/fetchSkills';
+import {fetchSocials} from './../utils/fetchSocials';
+import {fetchExperiences} from './../utils/fetchExperiences';
+import {fetchPageInfo} from './../utils/fetchPageInfo';
 
 
 type Props = {
@@ -36,7 +36,7 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
           <link rel="icon" href="/favicon.ico" />
         </Head> 
 
-        <Header />
+        <Header socials={socials} />
 
         <section id='hero' className='snap-start'>
           <Hero />

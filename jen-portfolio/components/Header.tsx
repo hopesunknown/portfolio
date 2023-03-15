@@ -2,10 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import {SocialIcon} from 'react-social-icons';
 import {motion} from 'framer-motion';
+import {Social} from './../typings';
 
-type Props = {}
+type Props = {
+  socials: Social[];
+}
 
-function Header({}: Props) {
+function Header({socials}: Props) {
   return (
     <header className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-30 xl:items-center'>
       <motion.div 
@@ -22,38 +25,50 @@ function Header({}: Props) {
         }}
         transition={{duration: 1.5}}
       >
-        <SocialIcon
+        {socials.map((social) => (
+          <SocialIcon
+            key={social._id}
+            url={social.url} 
+            target='_blank'
+            fgColor='transparent' 
+            bgColor='#FBC101'
+            style={{margin: 5}}
+            className='hoverSocialBtn' 
+          />
+        ))}
+
+        {/* <SocialIcon
           url='https://www.github.com/hopesunknown' 
           target='_blank'
           fgColor='transparent' 
           bgColor='#FBC101'
           style={{margin: 5}}
           className='hoverSocialBtn' 
-        /><br/>
-        <SocialIcon 
+        /><br/> */}
+        {/* <SocialIcon 
           url='https://www.linkedin.com/in/jentchai/' 
           target='_blank'
           fgColor='transparent' 
           bgColor='#FBC101' 
           style={{margin: 5}}
           className='hoverSocialBtn'  
-        />
-        <SocialIcon
+        /> */}
+        {/* <SocialIcon
           url='https://www.youtube.com/@jentchai1728' 
           target='_blank'
           fgColor='transparent' 
           bgColor='#FBC101'
           style={{margin: 5}} 
           className='hoverSocialBtn' 
-        /><br/>
-        <SocialIcon 
+        /><br/> */}
+        {/* <SocialIcon 
           url='https://medium.com/@jentchai' 
           target='_blank'
           fgColor='transparent' 
           bgColor='#FBC101' 
           style={{margin: 5}} 
           className='hoverSocialBtn' 
-        />
+        /> */}
       </motion.div>
       
 

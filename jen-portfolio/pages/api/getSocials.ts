@@ -9,7 +9,7 @@ const query = groq`
 
 type Data = {
   socials: Social[]
-}
+};
 
 export default async function handler(
   req: NextApiRequest,
@@ -17,5 +17,5 @@ export default async function handler(
 ) {
   const socials: Social[] = await sanityClient.fetch(query);
 
-  res.status(200).json({ socials })
-}
+  res.status(200).json({socials})
+};

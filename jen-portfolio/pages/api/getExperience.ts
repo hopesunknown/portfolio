@@ -1,6 +1,6 @@
 import type {NextApiRequest, NextApiResponse} from 'next';
 import {groq} from 'next-sanity';
-import {sanityClient} from '../../sanity';
+import {sanityClient} from './../../sanity';
 import {Experience} from './../../typings';
 
 const query = groq`
