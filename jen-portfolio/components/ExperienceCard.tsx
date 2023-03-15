@@ -45,7 +45,7 @@ const ExperienceCard = ({experience}: Props) => {
           {experience.dateStarted} -{" "}
           {/* {experience.isCurrentlyWorkingHere ? 'Present' : experience.dateEnded.toDateString()} */}
         </p>
-        <ul className='list-disc space-y-4 ml-5 text-lg'>
+        <ul className='list-disc space-y-4 ml-5 text-lg p-5'>
           {experience.points.map((point, index) => (
             <li key={index}>{point}</li>
           ))}
