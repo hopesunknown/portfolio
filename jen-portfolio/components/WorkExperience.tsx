@@ -1,10 +1,14 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 import ExperienceCard from './ExperienceCard';
+import {Experience} from './../typings';
+import experience from '@/sanity/schemas/experience';
 
-type Props = {};
+type Props = {
+  experiences: Experience[];
+};
 
-const WorkExperience = (props: Props) => {
+const WorkExperience = ({experiences}: Props) => {
   return (
     <>
       <motion.div 
@@ -18,10 +22,12 @@ const WorkExperience = (props: Props) => {
       >
         <h3 className='absolute top-24 uppercase tracking-[5px] text-gray-500 text-2xl'>Experience</h3>
         <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-500/10 scrollbar-thumb-[#FBC101]/80'>
-          <ExperienceCard />
-          <ExperienceCard />
-          <ExperienceCard />
-          <ExperienceCard />
+          {experiences?.map((experience) => (
+            <ExperienceCard
+              key={experience._id}
+              experience={experience}
+            />
+          ))}
         </div>
       </motion.div>
     </>
