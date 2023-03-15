@@ -22,6 +22,7 @@ const Hero = (props: Props) => {
       className='h-screen flex flex-col space-y-8 items-center justify-center text-center overlow-hidden'
     >
       <BackgroundCircles />
+      <div className='flex flex-col z-50 items-center'>
       <Image
         src={profilePic}
         height={250}
@@ -30,8 +31,7 @@ const Hero = (props: Props) => {
         placeholder='blur'
         alt='profile image of the developer' 
       />
-      <div className='z-50'>
-        <h1 className='text-5xl lg:text-6xl font-semibold px-10'>Hello, my name is Jen Tchai</h1>
+        <h1 className='text-5xl lg:text-6xl font-semibold px-10'>Hello, my name is Jen Tchai.</h1>
         <h2 className='text-xl text-gray-500 pb-2 tracking-[2px]'>I am a Frontend Developer, based in Washington, DC.</h2>
         {/* <div>{text}</div> */}
       </div>

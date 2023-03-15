@@ -25,50 +25,57 @@ const ContactMe = (props: Props) => {
         <h4 className='text-4xl font-semibold text-center'>This is where you can find me.<br/>
           <span className='decoration-[#FBC101]/50 underline'>Let's connect.</span>
         </h4>
-        <div className='space-y-10'>
-          <div className='flex items-center space-x-5 justify-center'>
+        <div className='space-y-5'>
+          <div className='flex items-left space-x-5 justify-left ml-20'>
               <SocialIcon
-          url='https://www.github.com/hopesunknown' 
-          target='_blank'
-          fgColor='transparent' 
-          bgColor='#FBC101'
-          style={{margin: 2}}
-          className='hoverSocialBtn' 
-        /><a href='https://www.github.com/hopesunknown' target='_blank'>github.com/hopesunknown</a><br/>
+                url='https://www.github.com/hopesunknown' 
+                target='_blank'
+                fgColor='transparent' 
+                bgColor='#FBC101'
+                className='hoverSocialBtn' 
+              />
+              <a href='https://www.github.com/hopesunknown' target='_blank' className='socialUrlLink'>
+                github.com/hopesunknown
+              </a>
             </div>
 
-            <div className='flex items-center space-x-5 justify-center'>
+            <div className='flex items-left space-x-5 justify-left ml-20'>
               <SocialIcon 
-          url='https://www.linkedin.com/in/jentchai/' 
-          target='_blank'
-          fgColor='transparent' 
-          bgColor='#FBC101' 
-          style={{margin: 2}}
-          className='hoverSocialBtn'  
-        /><a href='https://www.linkedin.com/in/jentchai/' target='_blank'>linkedin.com/in/jentchai/</a>
+                url='https://www.linkedin.com/in/jentchai/' 
+                target='_blank'
+                fgColor='transparent' 
+                bgColor='#FBC101'
+                className='hoverSocialBtn'  
+              />
+              <a href='https://www.linkedin.com/in/jentchai/' target='_blank' className='socialUrlLink'>
+                linkedin.com/in/jentchai
+              </a>
             </div>
 
-            <div className='flex items-center space-x-5 justify-center'>
+            <div className='flex items-left space-x-5 justify-left ml-20'>
               <SocialIcon
-          url='https://www.youtube.com/@jentchai1728' 
-          target='_blank'
-          fgColor='transparent' 
-          bgColor='#FBC101'
-          style={{margin: 2}} 
-          className='hoverSocialBtn' 
-        /><a href='https://www.youtube.com/@jentchai1728' target='_blank'>youtube.com/@jentchai1728</a>
+                url='https://www.youtube.com/@jentchai1728' 
+                target='_blank'
+                fgColor='transparent' 
+                bgColor='#FBC101'
+                className='hoverSocialBtn' 
+              />
+              <a href='https://www.youtube.com/@jentchai1728' target='_blank' className='socialUrlLink'>
+                youtube.com/@jentchai1728
+              </a>
             </div>
-            <div className='flex items-center space-x-5 justify-center'>
+            <div className='flex items-left space-x-5 justify-left ml-20'>
               <SocialIcon 
-          url='https://medium.com/@jentchai' 
-          target='_blank'
-          fgColor='transparent' 
-          bgColor='#FBC101' 
-          style={{margin: 2}} 
-          className='hoverSocialBtn' 
-        /><a href='https://medium.com/@jentchai' target='_blank'>medium.com/@jentchai</a>
+                url='https://medium.com/@jentchai' 
+                target='_blank'
+                fgColor='transparent' 
+                bgColor='#FBC101'
+                className='hoverSocialBtn' 
+              />
+              <a href='https://medium.com/@jentchai' target='_blank' className='socialUrlLink'>
+                medium.com/@jentchai
+              </a>
             </div>
-
           </div>
 
         <form 
@@ -84,7 +91,6 @@ const ContactMe = (props: Props) => {
           </div>
           <input {...register('subject')} className='contactInput' placeholder='Subject' type='text' />
           <textarea {...register('message')} className='contactInput' placeholder='Message' />
-          {/* <button className='bg-[#FBC101] py-5 px-10 rounded-md text-black font-bold text-lg'> */}
           <button className='heroButton'>
             Send Message
           </button>
