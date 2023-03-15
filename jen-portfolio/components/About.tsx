@@ -1,9 +1,13 @@
 import React from 'react';
 import {motion} from 'framer-motion';
+import {PageInfo} from './../typings';
+import {urlFor} from './../sanity';
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const About = (props: Props) => {
+const About = ({pageInfo}: Props) => {
   return (
     <>
       <motion.div 
@@ -29,17 +33,12 @@ const About = (props: Props) => {
             opacity: 1
           }}
           transition={{duration: 1.5}}
-          src='./../public/image0.jpeg'
+          src={urlFor(pageInfo?.profilePic).url()}
+          alt='picture of the developer'
           className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
         />
         <div className='space-y-10 px-10 md:px-10'>
-          {/* <h4 className='text-4xl font-semibold'></h4> */}
-          <p className='text-base'>
-          I am a Frontend Developer with experience in JavaScript, React, NextJS, Typescript, and Ruby on Rails, and have a professional background in psychology, medical research, and mental health counseling. My expertise lies in Frontend Development and UX/UI Design.
-          </p>
-          <p className='text-base'>
-          My ultimate goal is to create websites that are user-friendly, accessible, lightweight, and responsive. To achieve this, I believe in employing a pragmatic, personal, and creative approach to storytelling that incorporates intelligent ideas and innovative technology. I am convinced that this approach will captivate users and provide a great digital experience.
-          </p>
+          <p className='text-base'>{pageInfo?.backgroundInformation}</p>
         </div>
       </motion.div>
     </>
