@@ -71,6 +71,16 @@ const Projects = ({projects}: Props) => {
                   style={{marginLeft: 5, marginRight: 5}}
                   className='hoverSocialBtn' 
                 />
+                <SocialIcon
+                  key={project?._id}
+                  url={project?.linkToBuild2}
+                  network='github' 
+                  target='_blank'
+                  fgColor='transparent' 
+                  bgColor='#FBC101'
+                  style={{marginLeft: 5, marginRight: 5}}
+                  className='hoverSocialBtn' 
+                />
               </center>
             </div>
           </div>

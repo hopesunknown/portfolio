@@ -18,9 +18,9 @@ const ContactMe = (props: Props) => {
     <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
       <h3 className='absolute top-24 uppercase tracking-[5px] text-gray-500 text-2xl'>
         Contact Me
-      </h3><br/>
-      <div className='flex flex-col space-y-5'>
-        <h4 className='text-lg md:text-4xl font-semibold text-center'>This is where you can find me.<br/>
+      </h3><br/><br/>
+      <div className='flex flex-col space-y-5 md:mx-auto'>
+        <h4 className='text-lg md:text-4xl font-semibold text-center'>
           <span className='decoration-[#FBC101]/50 underline'>Let's connect.</span>
         </h4>
         <div className='space-y-2 md:space-y-5'>

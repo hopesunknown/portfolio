@@ -35,5 +35,10 @@ export default defineType({
       title: 'LinkToBuild',
       type: 'url',
     },
+    {
+      name: 'linkToBuild2',
+      title: 'LinkToBuild2',
+      type: 'url',
+    },
   ],
 })
