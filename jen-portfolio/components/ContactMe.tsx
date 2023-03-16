@@ -83,7 +83,7 @@ const ContactMe = (props: Props) => {
           action='https://formsubmit.co/e725e159ba0dc850132dc2683d0df0f9'
           method='POST'
           target='_blank'
-          className='flex flex-col space-y-2 w-fit mx-auto'
+          className='flex flex-col space-y-2 w:screen md:w-fit mx-auto'
         >
           <div className='flex space-x-2'>
             <input {...register('name')} className='contactInput' placeholder='Name' type='text' />

@@ -20,9 +20,11 @@ const About = ({pageInfo}: Props) => {
           opacity: 1
         }}
         transition={{duration: 1.5}}
-        className='flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
+        className='flex flex-col space-y-8 relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center'
+        // className='flex flex-col h-screen text-center md:text-left md:flex-row 
+        // max-w-7xl px-6 md:px-10 justify-evenly mx-auto items-center z-0 overflow-x-visible'
       >
-        <h3 className='absolute top-24 uppercase tracking-[5px] text-gray-500 text-2xl'>About Me</h3>
+        <h3 className='absolute top-24 uppercase tracking-[5px] text-gray-500 text-2xl'>About Me</h3><br/>
         <motion.img 
           initial={{
             x: -200,
@@ -35,16 +37,16 @@ const About = ({pageInfo}: Props) => {
           transition={{duration: 1.5}}
           src={urlFor(pageInfo?.profilePic).url()}
           alt='picture of the developer'
-          className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
+          className='-mt-1 mb-0 flex-shrink-0 w-40 h-40 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 md:mt-11 xl:w-[500px] xl:h-[600px]'
         />
-        <div className='space-y-10 px-10 md:px-10'>
+        <div className='space-y-1 md:space-y-10 md:px-10'>
           {/* <p className='text-base'>{pageInfo?.backgroundInformation}</p> */}
-          <p className='text-base'>
+          <div className='text-base'>
           I am a Frontend Developer with experience in JavaScript, React, NextJS, Typescript, and Ruby on Rails, and have a professional background in psychology, medical research, and mental health counseling. My expertise lies in Frontend Development and UX/UI Design.
-          </p>
-          <p className='text-base'>
+          </div>
+          <div className='text-base'>
           My ultimate goal is to create websites that are user-friendly, accessible, lightweight, and responsive. To achieve this, I believe in employing a pragmatic, personal, and creative approach to storytelling that incorporates intelligent ideas and innovative technology. I am convinced that this approach will captivate users and provide a great digital experience.
-          </p>
+          </div>
         </div>
       </motion.div>
     </>

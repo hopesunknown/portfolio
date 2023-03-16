@@ -5,7 +5,7 @@ import Link from 'next/link';
 // import {useTypewriter} from 'react-simple-typewriter';
 import {urlFor} from './../sanity';
 import {motion} from 'framer-motion';
-import BackgroundCircles from './BackgroundCircles';
+// import BackgroundCircles from './BackgroundCircles';
 import {PageInfo} from './../typings';
 
 type Props = {
@@ -20,7 +20,7 @@ const Hero = ({pageInfo}: Props) => {
       transition={{duration: 3}}
       className='h-screen flex flex-col space-y-8 items-center justify-center text-center overlow-hidden'
     >
-      <BackgroundCircles />
+      {/* <BackgroundCircles /> */}
       <div className='flex flex-col z-50 items-center'>
       <img
         // src={profilePic}
@@ -32,7 +32,7 @@ const Hero = ({pageInfo}: Props) => {
         alt='profile image of the developer' 
       />
         <h1 className='text-5xl lg:text-6xl font-semibold px-10'>Hello, my name is {pageInfo?.name}.</h1>
-        <h2 className='text-xl text-gray-500 pb-2 tracking-[2px]'>{pageInfo?.role}</h2>
+        <h2 className='text-xl text-gray-500 pb-2 tracking-[1px]'>{pageInfo?.role}</h2>
         {/* <div>{text}</div> */}
       </div>
       <div className='pt-5'>
