@@ -25,7 +25,7 @@ const ExperienceCard = ({experience}: Props) => {
         src={urlFor(experience?.companyImage).url()}
         alt='company logo' 
       /> */}
-      <div className='px-8 md:px-8 text-center'>
+      <div className='px-8 md:px-8 text-center md:mx-auto'>
         <h4 className='text-xl md:text-2xl font-light'>{experience.jobTitle}</h4>
         <p className='font-bold text-lg md:text-xl mt-1 px-0 md:px-10 text-center'>{experience.company}</p>
         <div className='flex space-x-8 my-4 ml-5 items-center'>
