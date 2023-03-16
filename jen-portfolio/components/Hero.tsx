@@ -32,7 +32,7 @@ const Hero = ({pageInfo}: Props) => {
         alt='profile image of the developer' 
       />
         <h1 className='text-5xl lg:text-6xl font-semibold px-10'>Hello, my name is {pageInfo?.name}.</h1>
-        <h2 className='text-xl text-gray-500 pb-2 tracking-[1px]'>{pageInfo?.role}</h2>
+        <h2 className='text-xl text-gray-500 mx-4 mt-4 pb-2 tracking-[1px]'>{pageInfo?.role}</h2>
         {/* <div>{text}</div> */}
       </div>
       <div className='pt-5'>
