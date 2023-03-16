@@ -41,9 +41,9 @@ const ExperienceCard = ({experience}: Props) => {
           ))}
         </div>
         <p className='uppercase py-5 text-gray-300'>
-          {/* {new Date(experience.dateStarted).toDateString()} -{" "} */}
-          {experience.dateStarted} -{" "}
-          {/* {experience.isCurrentlyWorkingHere ? 'Present' : experience.dateEnded.toDateString()} */}
+          {new Date(experience.dateStarted).toDateString()} -{" "}
+          {/* {experience.dateStarted} -{" "} */}
+          {experience.isCurrentlyWorkingHere ? 'Present' : new Date(experience.dateEnded).toDateString()}
         </p>
         <ul className='list-disc space-y-4 ml-5 text-lg p-5'>
           {experience.points.map((point, index) => (
