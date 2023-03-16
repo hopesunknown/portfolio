@@ -4,7 +4,7 @@ This is a personal project where I showcase who I am, my work experiences, skill
 
 ## Technologies used:
 
-React/NextJS, Typescript, Tailwind CSS, Sanity (for CMS)
+React/NextJS, Typescript, Tailwind CSS, Sanity (for backend/CMS)
 
 ## Fun extras used:
 
