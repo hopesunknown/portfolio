@@ -25,9 +25,9 @@ const Hero = ({pageInfo}: Props) => {
       <img
         // src={profilePic}
         src={urlFor(pageInfo?.heroImage).url()}
-        height={250}
-        width={250}
-        className='roundedImg'
+        // height={250}
+        // width={250}
+        className='roundedImg h-[100px] w-[100px] md:h-[250px] md:w-[250px]'
         placeholder='blur'
         alt='profile image of the developer' 
       />
