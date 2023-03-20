@@ -18,13 +18,13 @@ const ContactMe = (props: Props) => {
     <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
       <h3 className='absolute top-24 uppercase tracking-[2px] md:tracking-[5px] text-gray-500 text-xl md:text-2xl'>
         Contact Me
-      </h3><br/><br/>
-      <div className='flex flex-col space-y-5 md:mx-auto'>
+      </h3><br/>
+      <div className='flex flex-col space-y-4 md:mx-auto'>
         <h4 className='text-lg md:text-4xl font-semibold text-center'>
           <span className='decoration-[#FBC101]/50 underline'>Let's connect.</span>
         </h4>
         <div className='space-y-2 md:space-y-5'>
-          <div className='flex items-left space-x-5 justify-left ml-5 md:ml-0'>
+          <div className='flex items-left space-x-4 justify-left ml-0'>
             <SocialIcon
               url='https://www.github.com/hopesunknown' 
               target='_blank'
@@ -36,7 +36,7 @@ const ContactMe = (props: Props) => {
               github.com/hopesunknown
             </a>
           </div>
-          <div className='flex items-left space-x-5 justify-left ml-5 md:ml-0'>
+          <div className='flex items-left space-x-4 justify-left ml-0'>
             <SocialIcon 
               url='https://www.linkedin.com/in/jentchai/' 
               target='_blank'
@@ -48,7 +48,7 @@ const ContactMe = (props: Props) => {
               linkedin.com/in/jentchai
             </a>
           </div>
-          <div className='flex items-left space-x-5 justify-left ml-5 md:ml-0'>
+          <div className='flex items-left space-x-4 justify-left ml-0'>
             <SocialIcon
               url='https://www.youtube.com/@jentchai1728' 
               target='_blank'
@@ -60,7 +60,7 @@ const ContactMe = (props: Props) => {
               youtube.com/@jentchai1728
             </a>
           </div>
-          <div className='flex items-left space-x-5 justify-left ml-5 md:ml-0'>
+          <div className='flex items-left space-x-4 justify-left ml-0'>
             <SocialIcon 
               url='https://medium.com/@jentchai' 
               target='_blank'
