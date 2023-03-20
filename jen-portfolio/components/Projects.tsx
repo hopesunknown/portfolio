@@ -24,7 +24,7 @@ const Projects = ({projects}: Props) => {
       </h3>
       <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-500/10 scrollbar-thumb-[#FBC101]/80'>
         {projects?.map((project, index) => (
-          <div key={index} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-4 items-center justify-center p-20 md:p-44 h-screen'>
+          <div key={index} className='w-screen flex-shrink-0 snap-center flex flex-col md:space-y-4 items-center justify-center p-19 md:p-44 h-screen'>
             {/* <motion.img 
               initial={{
                 x: -300,
@@ -41,10 +41,10 @@ const Projects = ({projects}: Props) => {
               src={urlFor(project?.image).url()}
               alt='project screenshot image'
               // className='w-60 h-50 xl:w-[450px] xl:h-[300px] object-cover object-center ml-8'
-              width={350}
-              height={200}
+              width={300}
+              height={180}
             />
-          <div className='space-y-6 px-0 md:px-10 max-w-6xl'>
+          <div className='space-y-1 md:space-y-6 px-0 md:px-10 max-w-6xl'>
             <h4 className='text-md md:text-4xl font-semibold text-center'>
               <span className='underline decoration-[#FBC101]/50'>Project {index + 1} of {projects.length}</span><br/>
                 {project?.title}
@@ -59,8 +59,10 @@ const Projects = ({projects}: Props) => {
                   />
                 ))}
               </div><br/>
-              <span>{project?.summary}</span>
-              <center>
+              <div className='flex items-center justify-center'>
+                <span className='mx-4'>{project?.summary}</span>
+              </div>
+              <div className='flex items-center space-x-2 justify-center'>
                 <SocialIcon
                   url={project?.linkToBuild}
                   network='youtube' 
@@ -80,14 +82,12 @@ const Projects = ({projects}: Props) => {
                   style={{marginLeft: 5, marginRight: 5}}
                   className='hoverSocialBtn' 
                 />
-              </center>
+              </div>
             </div>
           </div>
         ))}
         </div>
       <div className='absolute bg-[#f7da7b] border border-[#f7da7b] rounded-full h-[500px] w-[500px] opacity-10 mt-8 z-0'/>
-      {/* <div className='w-full absolute top-[30%] bg-[#FBC101]/10 left-0 h-[500px]' rounded-full/> */}
-
 </motion.div>
   )
 }
