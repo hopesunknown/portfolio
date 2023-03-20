@@ -24,3 +24,7 @@ Deployed portfolio site using Vercel, who created NextJS.
 ### To start this NextJS project/portfolio site locally:
 
 'cd' into subdirectory called 'jen-portfolio' (this is where the main code lives), type 'npm run dev' in terminal, and then open http://localhost:3000 (this is default) to view it in your browser.
+
+### Deploying to Vercel:
+
+'cd' into subdirectory called 'jen-portfolio', type 'vercel build', and then 'vercel deploy --prebuilt'. Since this GitHub repo is connected to the Vercel deployment project it is able to do automatic deployments via pushing changes to 'main' branch.
