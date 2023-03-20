@@ -16,7 +16,7 @@ const ContactMe = (props: Props) => {
   const {register, handleSubmit} = useForm<Inputs>();
   return (
     <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
-      <h3 className='absolute top-24 uppercase tracking-[5px] text-gray-500 text-2xl'>
+      <h3 className='absolute top-24 uppercase tracking-[5px] text-gray-500 text-xl md:text-2xl'>
         Contact Me
       </h3><br/><br/>
       <div className='flex flex-col space-y-5 md:mx-auto'>
