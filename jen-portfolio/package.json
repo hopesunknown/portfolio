@@ -9,8 +9,9 @@
     "react-social-icons": "^5.15.0"
   },
   "devDependencies": {
-    "@types/node": "^18.15.3",
-    "@types/react": "^18.0.1",
+    "@types/node": "^17.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "typescript": "^5.0.2"
   }
 }
