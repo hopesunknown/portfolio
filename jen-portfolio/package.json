@@ -6,8 +6,7 @@
     "framer-motion": "^10.6.0",
     "next-sanity": "^4.1.5",
     "react-hook-form": "^7.43.7",
-    "react-social-icons": "^5.15.0",
-    "typescript": "^5.0.2"
+    "react-social-icons": "^5.15.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.3",
