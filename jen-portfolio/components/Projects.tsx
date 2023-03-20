@@ -25,18 +25,6 @@ const Projects = ({projects}: Props) => {
       <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-500/10 scrollbar-thumb-[#FBC101]/80'>
         {projects?.map((project, index) => (
           <div key={index} className='w-screen flex-shrink-0 snap-center flex flex-col md:space-y-4 items-center justify-center p-19 md:p-44 h-screen'>
-            {/* <motion.img 
-              initial={{
-                x: -300,
-                opacity: 0
-              }}
-              whileInView={{y: 0, opacity: 1}}
-              transition={{duration: 1.5}}
-              viewport={{once: true}}
-              src={urlFor(project?.image).url()} 
-              alt='project screenshot image' 
-              className='w-60 h-50 xl:w-[450px] xl:h-[300px] object-cover object-center ml-8'
-            /> */}
             <img 
               src={urlFor(project?.image).url()}
               alt='project screenshot image'
@@ -45,7 +33,7 @@ const Projects = ({projects}: Props) => {
               height={180}
             />
           <div className='space-y-1 md:space-y-6 px-0 md:px-10 max-w-6xl'>
-            <h4 className='text-md md:text-4xl font-semibold text-center'>
+            <h4 className='text-md md:text-3xl font-semibold text-center'>
               <span className='underline decoration-[#FBC101]/50'>Project {index + 1} of {projects.length}</span><br/>
                 {project?.title}
               </h4>
@@ -88,7 +76,7 @@ const Projects = ({projects}: Props) => {
         ))}
         </div>
       <div className='absolute bg-[#f7da7b] border border-[#f7da7b] rounded-full h-[500px] w-[500px] opacity-10 mt-8 z-0'/>
-</motion.div>
+    </motion.div>
   )
 }
 
