@@ -36,42 +36,9 @@ function Header({socials}: Props) {
             className='hoverSocialBtn' 
           />
         ))}
-
-        {/* <SocialIcon
-          url='https://www.github.com/hopesunknown' 
-          target='_blank'
-          fgColor='transparent' 
-          bgColor='#FBC101'
-          style={{margin: 5}}
-          className='hoverSocialBtn' 
-        /><br/> */}
-        {/* <SocialIcon 
-          url='https://www.linkedin.com/in/jentchai/' 
-          target='_blank'
-          fgColor='transparent' 
-          bgColor='#FBC101' 
-          style={{margin: 5}}
-          className='hoverSocialBtn'  
-        /> */}
-        {/* <SocialIcon
-          url='https://www.youtube.com/@jentchai1728' 
-          target='_blank'
-          fgColor='transparent' 
-          bgColor='#FBC101'
-          style={{margin: 5}} 
-          className='hoverSocialBtn' 
-        /><br/> */}
-        {/* <SocialIcon 
-          url='https://medium.com/@jentchai' 
-          target='_blank'
-          fgColor='transparent' 
-          bgColor='#FBC101' 
-          style={{margin: 5}} 
-          className='hoverSocialBtn' 
-        /> */}
       </motion.div>
       <motion.div 
-        className='flex flex-row items-center text-black-300 cursor-pointer'
+        className='flex flex-row items-center text-black-300 cursor-pointer mt-1 md:mt-0'
         initial={{
           x: 500,
           opacity: 0,

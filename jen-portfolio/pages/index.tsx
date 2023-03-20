@@ -16,7 +16,6 @@ import {fetchSocials} from './../utils/fetchSocials';
 import {fetchExperiences} from './../utils/fetchExperiences';
 import {fetchPageInfo} from './../utils/fetchPageInfo';
 
-
 type Props = {
   pageInfo: PageInfo;
   experiences: Experience[];
@@ -27,53 +26,51 @@ type Props = {
 
 const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
   return (
-    <>
-      <div className='bg-[rgb(27,27,27)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-500/20 scrollbar-thumb-[#F7AB0A]/80'>
-        <Head>
-          <title>Jen Tchai | Frontend Developer | Portfolio Site</title>
-          <meta name="description" content="Jen Tchai Portfolio Site" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head> 
+    <div className='bg-[rgb(27,27,27)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-500/20 scrollbar-thumb-[#F7AB0A]/80'>
+      <Head>
+        <title>Jen Tchai | Frontend Developer | Portfolio Site</title>
+        <meta name="description" content="Jen Tchai Frontend Developer Portfolio Site" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head> 
 
-        <Header socials={socials} />
+      <Header socials={socials} />
 
-        <section id='hero' className='snap-start'>
-          <Hero pageInfo={pageInfo} />
-        </section>
+      <section id='hero' className='snap-start'>
+        <Hero pageInfo={pageInfo} />
+      </section>
 
-        <section id='about' className='snap-center'>
-          <About pageInfo={pageInfo} />
-        </section>
+      <section id='about' className='snap-center'>
+        <About pageInfo={pageInfo} />
+      </section>
 
-        <section id='experience' className='snap-center'>
-          <WorkExperience experiences={experiences} />
-        </section>
+      <section id='experience' className='snap-center'>
+        <WorkExperience experiences={experiences} />
+      </section>
 
-        <section id='skills' className='snap-start'>
-          <Skills skills={skills} />
-        </section>
+      <section id='skills' className='snap-start'>
+        <Skills skills={skills} />
+      </section>
 
-        <section id='projects' className='snap-start'>
-          <Projects projects={projects} />
-        </section>
+      <section id='projects' className='snap-start'>
+        <Projects projects={projects} />
+      </section>
 
-        <section id='contact' className='snap-start'>
-          <ContactMe />
-        </section>
+      <section id='contact' className='snap-start'>
+        <ContactMe />
+      </section>
 
-        <Link href='#hero'>
-          <footer className='sticky bottom-5 w-full cursor-pointer'>
-            <div className='flex flex-col items-center justify-center'>
-              <button className='h-10 w-10 rounded-full filter hover:transform-[50%] cursor-pointer'>
-                <ArrowUpCircleIcon className='text-[#FBC101] h-8 w-8' />
-              </button>
-                <p>Go to Top</p>
-            </div>
-          </footer>
-        </Link>
-      </div>
-    </>
+      <Link href='#hero'>
+        <footer className='sticky bottom-11 md:bottom-5 w-full cursor-pointer'>
+          <div className='flex flex-col items-center justify-center'>
+            <button className='h-10 w-10 rounded-full filter hover:transform-[50%] cursor-pointer'>
+              <ArrowUpCircleIcon className='text-[#FBC101] h-8 w-8' />
+            </button>
+              <p className=''>Go to Top</p>
+          </div>
+        </footer>
+      </Link>
+    </div>
   )
 };
 
