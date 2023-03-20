@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@portabletext/react": "^2.0.2",
-    "@sanity/image-url": "^1.0.2",
-    "next-sanity": "^4.1.5"
-  }
-}
