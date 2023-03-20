@@ -19,7 +19,7 @@ const Projects = ({projects}: Props) => {
       transition={{duration: 1.5}}
       className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'
     >
-      <h3 className='absolute top-24 uppercase tracking-[5px] text-gray-500 text-xl md:text-2xl'>
+      <h3 className='absolute top-24 uppercase tracking-[2px] md:tracking-[5px] text-gray-500 text-xl md:text-2xl'>
         Projects
       </h3>
       <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-500/10 scrollbar-thumb-[#FBC101]/80'>
@@ -62,7 +62,6 @@ const Projects = ({projects}: Props) => {
               <span>{project?.summary}</span>
               <center>
                 <SocialIcon
-                  key={project?._id}
                   url={project?.linkToBuild}
                   network='youtube' 
                   target='_blank'
@@ -72,7 +71,7 @@ const Projects = ({projects}: Props) => {
                   className='hoverSocialBtn' 
                 />
                 <SocialIcon
-                  key={project?._id}
+                  // key={project?._id}
                   url={project?.linkToBuild2}
                   network='github' 
                   target='_blank'

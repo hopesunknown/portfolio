@@ -20,11 +20,9 @@ const About = ({pageInfo}: Props) => {
           opacity: 1
         }}
         transition={{duration: 1.5}}
-        className='flex flex-col space-y-8 relative h-screen text-center md:text-left md:flex-row max-w-7xl px-9 justify-center mx-auto items-center'
-        // className='flex flex-col h-screen text-center md:text-left md:flex-row 
-        // max-w-7xl px-6 md:px-10 justify-evenly mx-auto items-center z-0 overflow-x-visible'
+        className='flex flex-col space-y-3 md:space-y-8 relative h-screen text-center md:text-left md:flex-row max-w-7xl px-7 md:px-9 justify-center mx-auto items-center'
       >
-        <h3 className='absolute top-24 uppercase tracking-[5px] text-gray-500 text-xl md:text-2xl'>About Me</h3><br/><br/><br/>
+        <h3 className='absolute top-24 uppercase tracking-[2px] md:tracking-[5px] text-gray-500 text-xl md:text-2xl'>About Me</h3><br/><br/><br/>
         <motion.img 
           initial={{
             x: -200,
