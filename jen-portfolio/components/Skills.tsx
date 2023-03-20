@@ -1,6 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion';
-import Skill from './Skill';
+import IndivSkill from './IndivSkill';
 import {Skill as SkillType} from './../typings';
 
 type Props = {
@@ -25,7 +25,7 @@ const Skills = ({skills}: Props) => {
         <h3 className='absolute top-24 uppercase tracking-[5px] text-gray-500 text-xl md:text-2xl'>Skills</h3><br/><br/><br/><br/>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2'>
           {skills.map((skill) => (
-            <Skill 
+            <IndivSkill 
               key={skill._id}
               skill={skill}
             />
