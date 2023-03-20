@@ -4,6 +4,8 @@ This is a personal portfolio site using React, NextJS, Typescript, and Tailwind 
 
 At the top of the site there are social media buttons (https://jaketrent.github.io/react-social-icons/) that direct user to separate external tab to my GitHub, Medium blog, LinkedIn, and YouTube. It includes a button in the top-right corner to direct user to bottom-most section for contacting me via form submission, powered by Formsubmit.co.
 
+Deployed portfolio site using Vercel, who created NextJS.
+
 ## Technologies used:
 
 -React/NextJS (for building user-friendly single-page apps with server-side rendering)
@@ -19,10 +21,6 @@ At the top of the site there are social media buttons (https://jaketrent.github.
 -Framer Motion (for animations),
 -Formsubmit.co (for handling form submissions without exposing my personal email address)
 
-### To start this NextJS project/portfolio site:
+### To start this NextJS project/portfolio site locally:
 
-type 'npm run dev' in terminal, and then open http://localhost:3000 (this is default) to view it in your browser.
-
-### To view locally:
-
-type 'localhost:3000' in browser - this is the default but check if it runs on another local host portal
+'cd' into subdirectory called 'jen-portfolio' (this is where the main code lives), type 'npm run dev' in terminal, and then open http://localhost:3000 (this is default) to view it in your browser.
