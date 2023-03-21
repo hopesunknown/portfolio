@@ -80,9 +80,7 @@ const ContactMe = (props: Props) => {
           target='_blank'
           className='flex flex-col space-y-1 md:space-y-2 w:screen w-[200px] md:w-fit mx-auto'
         >
-          {/* <div className='flex space-x-5 md:my-0 w-fit md:space-x-2'> */}
             <input {...register('name')} className='contactInput' placeholder='Name' type='text' />
-          {/* </div> */}
             <input {...register('email')} className='contactInput' placeholder='Email' type='email' />
           <input {...register('subject')} className='contactInput' placeholder='Subject' type='text' />
           <textarea {...register('message')} className='contactInput' placeholder='Message' />

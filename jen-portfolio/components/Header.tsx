@@ -56,13 +56,12 @@ function Header({socials}: Props) {
         <SocialIcon 
           className='hoverSocialBtn'
           network='email'
-          // url='mailto:jentchai@gmail.com'
           url='#contact'
           fgColor='transparent' 
           bgColor='#FBC101' 
         />
         <Link href='#contact'>
-          <p className='p-3 uppercase hidden md:inline-flex text-sm text-black-400'>Get in touch</p>
+          <p className='p-3 uppercase hidden md:inline-flex text-sm text-black-400'>Contact Me</p>
         </Link>
       </motion.div>
     </header>
