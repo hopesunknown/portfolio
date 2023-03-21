@@ -42,14 +42,14 @@ const Projects = ({projects}: Props) => {
           <ArrowLeftCircleIcon className='text-[#FBC101] h-8 w-8' />
         </button>
       </div>
-      <div className='relative w-3/4 md:w-2/3 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-500/10 scrollbar-thumb-[#FBC101]/80 mt-6 md:mt-0'>
+      <div className='relative w-3/4 md:w-2/3 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-500/10 scrollbar-thumb-[#FBC101]/80 mt-24 md:mt-0'>
         {projects?.slice(currentIndex, currentIndex + 1).map((project, index) => (
           <motion.div 
             key={index} 
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
             transition={{duration: 1.2}}
-            className='md:w-3/4 flex-shrink-0 snap-center flex flex-col md:space-y-4 items-center justify-center mx-auto h-screen'
+            className='w-11/12 md:w-3/4 flex-shrink-0 snap-center flex flex-col md:space-y-4 items-center justify-center mx-auto h-screen'
           >
             <img 
               src={urlFor(project?.image).url()}
@@ -74,7 +74,7 @@ const Projects = ({projects}: Props) => {
                 ))}
               </div>
               <div className='flex items-center justify-center'>
-                <span className='mx-4'>{project?.summary}</span>
+                <span className='mx-auto'>{project?.summary}</span>
               </div>
               <div className='flex items-center space-x-2 justify-center'>
                 <SocialIcon
