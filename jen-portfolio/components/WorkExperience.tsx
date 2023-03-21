@@ -24,7 +24,7 @@ const WorkExperience = ({experiences}: Props) => {
     <motion.div 
       initial={{opacity: 0}}
       whileInView={{opacity: 1}}
-      transition={{duration: 1.5}}
+      transition={{duration: 1.2}}
       className='h-screen relative flex overflow-hidden flex-col text-left max-w-full justify-evenly mx-auto items-center z-0'
     >
       <h3 className='absolute top-24 uppercase tracking-[2px] md:tracking-[5px] text-gray-500 text-xl md:text-2xl hidden md:inline-flex'>

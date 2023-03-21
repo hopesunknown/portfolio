@@ -20,7 +20,7 @@ const IndivSkill = ({skill, directionLeft}: Props) => {
             x: 0,
             opacity: 1
           }}
-          transition={{duration: 1.5}}
+          transition={{duration: 1.2}}
           src={urlFor(skill?.image).url()}
           className='rounded-full border border-gray-500 object-cover w-20 h-20 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out items-center'
         />
