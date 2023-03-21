@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {motion} from 'framer-motion';
 import ExperienceCard from './ExperienceCard';
 import {Experience} from './../typings';
@@ -10,6 +10,16 @@ type Props = {
 };
 
 const WorkExperience = ({experiences}: Props) => {
+  const [current, setCurrent] = useState(0);
+
+  const handleClickLess = () => {
+    setCurrent((current) => (current === 0 ? experiences.length - 1 : current - 1))
+  }
+
+  const handleClickMore = () => {
+    setCurrent((current) => (current === experiences.length - 1 ? 0 : current + 1))
+  }
+
   return (
     <motion.div 
       initial={{opacity: 0}}
@@ -33,9 +43,9 @@ const WorkExperience = ({experiences}: Props) => {
           </div>
         ))}
       </div>
-      <div className='flex flex-row items-center justify-center space-x-2 mb-3 md:mb-28 md:pb-10 md:mx-auto'>
-        <ArrowLeftCircleIcon className='text-[#FBC101] h-8 w-8'/>
-        <ArrowRightCircleIcon className='text-[#FBC101] h-8 w-8'/>
+      <div className='flex flex-row items-center justify-center space-x-2 mb-7 md:mb-28 md:pb-10 md:mx-auto'>
+        <button onClick={handleClickLess}><ArrowLeftCircleIcon className='text-[#FBC101] h-8 w-8' /></button>
+        <button onClick={handleClickMore}><ArrowRightCircleIcon className='text-[#FBC101] h-8 w-8' /></button>
       </div>
       {/* <div className='flex absolute flex-col items-center justify-center space-x-2 object-bottom'> */}
       {/* </div> */}
