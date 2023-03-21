@@ -10,16 +10,16 @@ type Props = {
 
 const ExperienceCard = ({experience}: Props) => {
   return (
-    <div className='space-y-1 md:space-y-6 px-0 md:px-10 max-w-6xl'>
-      <h4 className='text-md md:text-2xl font-semibold text-center'>
+    <div className='md:space-y-1'>
+      <h4 className='text-md md:text-2xl font-semibold text-center mb-2'>
         <span className='underline decoration-[#FBC101]/50'>
           {experience.jobTitle}
         </span>
       </h4>
-      <p className='font-bold text-md md:text-2xl mt-0 md:mt-1 px-0 md:px-10 text-center'>
+      <p className='font-bold text-md md:text-2xl px-0 md:px-10 text-center mb-2'>
         {experience.company}
       </p>
-      <div className='flex items-center space-x-2 justify-center'>
+      <div className='flex items-center space-x-2 justify-center mb-2'>
         {experience.technologies.map((technology) => (
           <img
             key={technology._id}
@@ -30,13 +30,13 @@ const ExperienceCard = ({experience}: Props) => {
         ))}
       </div>
       <div className='flex items-center justify-center'>
-        <p className='text-sm md:text-xl uppercase py-2 text-gray-300 items-center'>
+        <p className='text-sm md:text-xl uppercase text-gray-300 items-center mb-2'>
           {new Date(experience.dateStarted).toDateString()} -{" "}
           {experience.isCurrentlyWorkingHere ? 'Present' : new Date(experience.dateEnded).toDateString()}
         </p>
       </div>
       <div className='flex items-center justify-center'>
-        <ul className='list-disc space-y-2 md:space-y-4 text-md md:text-lg md:w-4/5 h-95 p-0 ml-8 mr-4 md:mx-0 md:p-8 items-left'>
+        <ul className='list-disc space-y-2 md:space-y-4 text-md md:text-lg md:w-4/5 h-95 items-left'>
           {experience.points.map((point, index) => (
           <li key={index}>{point}</li>
           ))}
