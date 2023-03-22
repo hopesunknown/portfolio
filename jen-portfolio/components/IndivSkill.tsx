@@ -4,11 +4,10 @@ import {Skill} from './../typings';
 import {urlFor} from './../sanity';
 
 type Props = {
-  directionLeft?: boolean;
   skill: Skill;
 };
 
-const IndivSkill = ({skill, directionLeft}: Props) => {
+const IndivSkill = ({skill}: Props) => {
   return (
     <div className='group relative flex cursor-pointer'>
       <motion.img 

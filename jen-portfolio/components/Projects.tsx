@@ -31,7 +31,7 @@ const Projects = ({projects}: Props) => {
     <motion.div 
       initial={{opacity: 0}}
       whileInView={{opacity: 1}}
-      transition={{duration: 1.2}}
+      transition={{duration: 1.7}}
       className='h-screen relative flex overflow-hidden flex-row text-left max-w-full justify-evenly mx-auto items-center z-0'
     > 
       <h3 className='absolute top-24 uppercase tracking-[2px] md:tracking-[5px] text-gray-500 text-xl md:text-2xl'>
@@ -42,19 +42,19 @@ const Projects = ({projects}: Props) => {
           <ArrowLeftCircleIcon className='text-[#FBC101] h-8 w-8' />
         </button>
       </div>
-      <div className='relative w-3/4 md:w-2/3 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-500/10 scrollbar-thumb-[#FBC101]/80 mt-24 md:mt-0'>
+      <div className='relative w-10/12 md:w-2/3 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-500/10 scrollbar-thumb-[#FBC101]/80 mt-24 md:mt-0'>
         {projects?.slice(currentIndex, currentIndex + 1).map((project, index) => (
           <motion.div 
             key={index} 
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
-            transition={{duration: 1.2}}
+            transition={{duration: 1.7}}
             className='w-11/12 md:w-3/4 flex-shrink-0 snap-center flex flex-col md:space-y-4 items-center justify-center mx-auto h-screen'
           >
             <img 
               src={urlFor(project?.image).url()}
               alt='project screenshot image'
-              className='w-60 h-45 md:w-[250px] md:h-[150px] xl:w-[450px] xl:h-[300px] object-cover object-center'
+              className='w-56 h-40 md:w-72 md:h-52 xl:w-96 xl:h-60 object-cover object-center'
             />
             <div className='space-y-1 md:space-y-6 px-0 md:px-10 max-w-6xl'>
               <h4 className='text-md md:text-3xl font-semibold text-center'>

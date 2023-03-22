@@ -28,7 +28,7 @@ const WorkExperience = ({experiences}: Props) => {
     <motion.div 
       initial={{opacity: 0}}
       whileInView={{opacity: 1}}
-      transition={{duration: 1.2}}
+      transition={{duration: 1.7}}
       className='h-screen relative flex overflow-hidden flex-row text-left max-w-full justify-evenly mx-auto items-center z-0'
     >
       <h3 className='absolute top-24 uppercase tracking-[2px] md:tracking-[5px] text-gray-500 text-xl md:text-2xl hidden md:inline-flex'>
@@ -45,7 +45,7 @@ const WorkExperience = ({experiences}: Props) => {
             key={experience._id} 
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
-            transition={{duration: 1.2}}
+            transition={{duration: 1.5}}
             className='w-11/12 md:w-3/4 flex-shrink-0 snap-center flex flex-col md:space-y-4 items-center justify-center mx-auto h-screen'>
             <h4 className='text-md md:text-2xl font-semibold text-center'>
               <span className='underline decoration-[#FBC101]/50'>

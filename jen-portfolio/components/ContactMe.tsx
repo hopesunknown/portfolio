@@ -20,11 +20,11 @@ const ContactMe = (props: Props) => {
         Contact Me
       </h3><br/>
       <div className='flex flex-col space-y-4 md:mx-auto'>
-        <h4 className='text-lg md:text-4xl font-semibold text-center'>
+        <h4 className='text-lg md:text-2xl font-semibold text-center'>
           <span className='decoration-[#FBC101]/50 underline'>Let's connect.</span>
         </h4>
-        <div className='space-y-2 md:space-y-5'>
-          <div className='flex items-left space-x-4 justify-left ml-0'>
+        <div className='space-y-1 md:space-y-4 mx-auto'>
+          <div className='flex items-left space-x-4 justify-left'>
             <SocialIcon
               url='https://www.github.com/hopesunknown' 
               target='_blank'
@@ -36,7 +36,7 @@ const ContactMe = (props: Props) => {
               github.com/hopesunknown
             </a>
           </div>
-          <div className='flex items-left space-x-4 justify-left ml-0'>
+          <div className='flex items-left space-x-4 justify-left'>
             <SocialIcon 
               url='https://www.linkedin.com/in/jentchai/' 
               target='_blank'
@@ -48,7 +48,7 @@ const ContactMe = (props: Props) => {
               linkedin.com/in/jentchai
             </a>
           </div>
-          <div className='flex items-left space-x-4 justify-left ml-0'>
+          <div className='flex items-left space-x-4 justify-left'>
             <SocialIcon
               url='https://www.youtube.com/@jentchai1728' 
               target='_blank'
@@ -60,7 +60,7 @@ const ContactMe = (props: Props) => {
               youtube.com/@jentchai1728
             </a>
           </div>
-          <div className='flex items-left space-x-4 justify-left ml-0'>
+          <div className='flex items-left space-x-4 justify-left'>
             <SocialIcon 
               url='https://medium.com/@jentchai' 
               target='_blank'
@@ -78,17 +78,16 @@ const ContactMe = (props: Props) => {
           action='https://formsubmit.co/e725e159ba0dc850132dc2683d0df0f9'
           method='POST'
           target='_blank'
-          className='flex flex-col space-y-1 md:space-y-2 w:screen w-[200px] md:w-fit mx-auto'
+          className='flex flex-col space-y-1 w-fit mx-auto'
         >
-            <input {...register('name')} className='contactInput' placeholder='Name' type='text' />
-            <input {...register('email')} className='contactInput' placeholder='Email' type='email' />
+          <input {...register('name')} className='contactInput' placeholder='Name' type='text' />
+          <input {...register('email')} className='contactInput' placeholder='Email' type='email' />
           <input {...register('subject')} className='contactInput' placeholder='Subject' type='text' />
           <textarea {...register('message')} className='contactInput' placeholder='Message' />
           <button className='heroButton'>
             Send Message
           </button>
         </form>
-
       </div>
     </div>
   )
