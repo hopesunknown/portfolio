@@ -19,10 +19,10 @@ const About = ({pageInfo}: Props) => {
           x: 0,
           opacity: 1
         }}
-        transition={{duration: 1.7}}
+        transition={{duration: 1.2}}
         className='flex flex-col space-y-3 md:space-y-8 relative h-screen text-center md:text-left md:flex-row max-w-7xl px-7 md:px-9 justify-center mx-auto items-center'
       >
-        <h3 className='absolute top-24 uppercase tracking-[2px] md:tracking-[5px] text-gray-500 text-xl md:text-2xl'>About Me</h3><br/><br/><br/>
+        <h3 className='absolute top-24 uppercase tracking-[2px] md:tracking-[5px] text-gray-500 text-xl md:text-2xl'>About Me</h3><br/><br/>
         <motion.img 
           initial={{
             x: 0,
@@ -32,7 +32,7 @@ const About = ({pageInfo}: Props) => {
             x: 0,
             opacity: 1
           }}
-          transition={{duration: 1.7}}
+          transition={{duration: 1.2}}
           src={urlFor(pageInfo?.profilePic).url()}
           alt='picture of the developer'
           className=' mb-0 flex-shrink-0 h-[90px] w-[90px] md:h-[250px] md:w-[250px] rounded-full object-cover md:rounded-lg md:mt-11 xl:w-[500px] xl:h-[600px]'
